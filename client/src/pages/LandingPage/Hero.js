@@ -1,12 +1,13 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
+import SwiperComponent from "../../components/SwiperComponent";
 import "./Hero.css";
 const Hero = () => {
   return (
     <>
       <div className="hero-section">
-        <Container xs={1} md={2} lg={2}>
-          <Row>
-            <Col lg={10}>
+        <Container>
+          <Row xs={1} lg={2} md={1}>
+            <Col>
               <p className="lead">Welcome to</p>
               <h1 className="display-1">The Banyan</h1>
               <h1 className="display-6">
@@ -26,7 +27,9 @@ const Hero = () => {
                 Past Yearbooks
               </Button>
             </Col>
-            <Col lg={2}></Col>
+            <Col>
+              <SwiperComponent />
+            </Col>
           </Row>
         </Container>
       </div>
