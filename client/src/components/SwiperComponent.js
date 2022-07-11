@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Navigation, Pagination } from "swiper";
+import Slides from "./Slides";
 
 const SwiperComponent = () => {
   return (
@@ -17,7 +18,7 @@ const SwiperComponent = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        navigation={true}
+        navigation={false}
         pagination={{
           clickable: true,
           dynamicBullets: true,
@@ -26,31 +27,31 @@ const SwiperComponent = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="img/img1.png" alt="" />
+          <Slides />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="img/img2.webp" alt="" />
+          <Slides />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="img/img3.webp" alt="" />
+          <Slides />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="img/img4.webp" alt="" />
+          <Slides />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="img/img1.webp" alt="" />
+          <Slides />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="img/img2.webp" alt="" />
+          <Slides />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="img/img7.webp" alt="" />
+          <Slides />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="img/img1.webp" alt="" />
+          <Slides />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="img/img1.webp" alt="" />
+          <Slides />
         </SwiperSlide>
       </Swiper>
     </>
