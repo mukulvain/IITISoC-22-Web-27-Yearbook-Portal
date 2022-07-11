@@ -4,9 +4,9 @@ const Hero = () => {
   return (
     <>
       <div className="hero-section">
-        <Container>
-          <Row xs={1} md={2} lg={2}>
-            <Col>
+        <Container xs={1} md={2} lg={2}>
+          <Row>
+            <Col lg={10}>
               <p className="lead">Welcome to</p>
               <h1 className="display-1">The Banyan</h1>
               <h1 className="display-6">
@@ -14,11 +14,11 @@ const Hero = () => {
                 <br />
                 Indian Institue of Technology, Indore
               </h1>
-              <p className="lead">
+              {/* <p className="lead">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
                 aliquam praesentium porro excepturi laborum expedita deserunt
                 sed reprehenderit temporibus eveniet.
-              </p>
+              </p> */}
               <Button variant="primary" className="m-2">
                 Login
               </Button>
@@ -26,7 +26,7 @@ const Hero = () => {
                 Past Yearbooks
               </Button>
             </Col>
-            <Col></Col>
+            <Col lg={2}></Col>
           </Row>
         </Container>
       </div>
