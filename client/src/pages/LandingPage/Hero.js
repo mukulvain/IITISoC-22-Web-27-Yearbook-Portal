@@ -7,8 +7,8 @@ const Hero = () => {
       <div className="hero-section">
         <Container>
           <Row xs={1} lg={2} md={1}>
-            <Col>
-              <p className="lead">Welcome to</p>
+            <Col className="align-items-center">
+              <p className="lead mb-0 fs-3">Welcome to</p>
               <h1 className="display-1">The Banyan</h1>
               <h1 className="display-6">
                 The Yearbook Portal of
@@ -20,14 +20,14 @@ const Hero = () => {
                 aliquam praesentium porro excepturi laborum expedita deserunt
                 sed reprehenderit temporibus eveniet.
               </p> */}
-              <Button variant="primary" className="m-2">
+              <Button variant="success" className="me-3 mt-3">
                 Login
               </Button>
-              <Button variant="secondary" className="m-2">
+              <Button variant="warning" className="me-2 mt-3">
                 Past Yearbooks
               </Button>
             </Col>
-            <Col>
+            <Col className="d-flex justify-content-center align-items-center">
               <SwiperComponent />
             </Col>
           </Row>
