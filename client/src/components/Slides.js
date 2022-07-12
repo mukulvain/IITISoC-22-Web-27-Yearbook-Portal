@@ -4,8 +4,13 @@ const Slides = (props) => {
   return (
     <>
       <div className="slides-section">
-        <Container>
-          <Row xs={1} lg={1} md={1} className="justify-content-md-center">
+        <Container className="mt-3">
+          <Row
+            xs={1}
+            lg={1}
+            md={1}
+            className="justify-content-center align-items-center"
+          >
             <Col
               className="d-flex justify-content-center align-items-center"
               style={{ minHeight: "200px", flexDirection: "column" }}
