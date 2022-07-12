@@ -7,10 +7,10 @@ const Hero = () => {
       <div className="hero-section">
         <Container>
           <Row xs={1} lg={2} md={1}>
-            <Col className="align-items-center">
+            <Col className="text-center text-lg-start">
               <p className="lead mb-0 fs-3">Welcome to</p>
               <h1 className="display-1">The Banyan</h1>
-              <h1 className="display-6">
+              <h1 className="display-6 fs-1">
                 The Yearbook Portal of
                 <br />
                 Indian Institue of Technology, Indore
