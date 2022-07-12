@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { useState, useEffect } from "react";
+import JsonData from "../data/quotes.json";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -11,6 +12,13 @@ import { Autoplay, Navigation, Pagination } from "swiper";
 import Slides from "./Slides";
 
 const SwiperComponent = () => {
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    setData(JsonData);
+  }, []);
+  console.log(data);
+
   return (
     <>
       <Swiper
@@ -26,33 +34,13 @@ const SwiperComponent = () => {
         modules={[Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <Slides />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slides />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slides />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slides />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slides />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slides />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slides />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slides />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Slides />
-        </SwiperSlide>
+        {data.map((d) => (
+          <div key={`${d}`}>
+            <SwiperSlide>
+              <Slides data={d} />
+            </SwiperSlide>
+          </div>
+        ))}
       </Swiper>
     </>
   );

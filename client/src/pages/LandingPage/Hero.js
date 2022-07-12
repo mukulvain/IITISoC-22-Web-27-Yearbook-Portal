@@ -15,6 +15,7 @@ const Hero = () => {
                 <br />
                 Indian Institue of Technology, Indore
               </h1>
+
               {/* <p className="lead">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
                 aliquam praesentium porro excepturi laborum expedita deserunt
