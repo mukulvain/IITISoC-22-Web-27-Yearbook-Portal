@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import NavbarComponent from "../../components/NavbarComponent";
-import { Container, Image, Row, Col } from 'react-bootstrap';
+import { Container, Image, Tabs, Tab } from 'react-bootstrap';
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Remarks from "./Remarks/Remarks";
 
 const ProfilePage = () => {
     const user = useSelector((state) => state.user.value);
@@ -29,7 +30,14 @@ const ProfilePage = () => {
                     <h1>{owner.name}</h1>
                 </Container>
             </Container>
-            
+            <Tabs defaultActiveKey="first">
+                <Tab eventKey="first" title="Remarks">
+                    <Remarks userId={user.googleId} ownerId={owner.googleId} />
+                </Tab>
+                <Tab eventKey="second" title="Memories">
+                    Hii, I am 2nd tab content
+                </Tab>
+            </Tabs>
         </>
     );
 }

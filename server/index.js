@@ -18,5 +18,7 @@ conn.once("open", () => console.log("Connected to Database!"));
 // routes part
 const userRoutes = require('./routes/userRoutes');
 app.use("/user", userRoutes);
+const remarksRoutes = require('./routes/remarksRoutes');
+app.use("/remarks", remarksRoutes);
 
 app.listen(PORT, () => console.log("Server ready and running!"));
