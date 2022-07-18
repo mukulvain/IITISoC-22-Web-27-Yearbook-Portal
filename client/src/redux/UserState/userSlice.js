@@ -25,6 +25,9 @@ export const userSlice = createSlice({
         name: loginJSON.name,
         email: loginJSON.email,
         googleId: loginJSON.googleId,
+        imageUrl: loginJSON.imageUrl,
+      }).then((user) => {
+        console.log(user.data.newUser);
       }).catch((err) => {
         console.log(err);
       });

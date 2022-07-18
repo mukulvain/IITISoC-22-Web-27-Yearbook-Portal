@@ -28,8 +28,12 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         {
-          user.loggedIn ? <Route path="/dashboard" element={<Dashboard />} /> :
-            <Route path="/profile/:profileId" element={<ProfilePage />} />
+          user.loggedIn ?
+            <>
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/profile/:ownerId" element={<ProfilePage />} />
+            </>
+            : <></>
         }
       </Routes>
     </>

@@ -2,6 +2,7 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import { login, logout } from "../redux/UserState/userSlice";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from 'react-router-dom';
 
 const NavbarComponent = () => {
   const user = useSelector((state) => state.user.value);
@@ -18,11 +19,11 @@ const NavbarComponent = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">Yearbook</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">Yearbook</Navbar.Brand>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/dashboard">Dashboard</Nav.Link>
-            <Nav.Link href={`/profile/${user.googleId}`}>My Profile</Nav.Link>
+            <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
+            <Nav.Link as={Link} to={`/profile/${user.googleId}`}>My Profile</Nav.Link>
           </Nav>
         </Navbar.Collapse>
         {user.loggedIn ? (

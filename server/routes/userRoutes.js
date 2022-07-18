@@ -10,11 +10,22 @@ router.post('/createNewUser', async (req, res) => {
       const user = await userModel.create(req.body);
       res.status(201).json({ "newUser": user });
     } else {
-      res.status(201).json({"newUser": query});
+      res.status(201).json({ "newUser": query });
     }
   } catch (err) {
     res.status(404).json({ "message": err });
   }
 });
+
+// get user
+router.post('/getUser', async (req, res) => {
+  try {
+    const query = await userModel.findOne({ googleId: req.body.googleId });
+    res.status(201).json({ "user": query });
+  } catch (err) {
+    res.status(404).json({ "message": err });
+  }
+});
+
 
 module.exports = router;
