@@ -27,5 +27,15 @@ router.post('/getUser', async (req, res) => {
   }
 });
 
+// find Users
+router.post('/findUsers', async (req, res) => {
+  try {
+    const query = await userModel.find({ name: new RegExp(req.body.name, 'i') });
+    res.status(201).json({ "data": query });
+  } catch (err) {
+    res.status(404).json({ "message": err });
+  }
+});
+
 
 module.exports = router;

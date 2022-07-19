@@ -5,6 +5,7 @@ import LandingPage from "./pages/LandingPage/LandingPage";
 import { initialize } from "./redux/UserState/userSlice";
 import { useSelector, useDispatch } from "react-redux";
 import ProfilePage from "./pages/Profile/ProfilePage";
+import Search from "./pages/Search/Search";
 
 const App = () => {
   const user = useSelector((state) => state.user.value);
@@ -32,6 +33,7 @@ const App = () => {
             <>
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/profile/:ownerId" element={<ProfilePage />} />
+              <Route path="/search" element={<Search />} />
             </>
             : <></>
         }

@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from 'react-redux';
-import NavbarComponent from "../../components/NavbarComponent";
+import NavbarComponent from "../../components/Navbar/NavbarComponent";
 import { Container, Image, Tabs, Tab } from 'react-bootstrap';
 import { useEffect, useState } from "react";
 import axios from "axios";

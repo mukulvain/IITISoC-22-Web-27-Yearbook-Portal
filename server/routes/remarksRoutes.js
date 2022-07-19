@@ -13,7 +13,7 @@ router.post('/getRemarks', async (req, res) => {
             console.log(query);
             res.status(202).json({ "data": query });
         } else {
-            const query = await remarksModel.find({ $or: [{ authorId: userId }, { approved: true }] });
+            const query = await remarksModel.find({ $or: [{ authorId: userId, ownerId: ownerId }, { approved: true, ownerId: ownerId }] });
             res.status(202).json({ "data": query });
         }
     } catch (err) {
