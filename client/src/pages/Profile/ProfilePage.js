@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import NavbarComponent from "../../components/Navbar/NavbarComponent";
-import { Container, Image, Tabs, Tab } from 'react-bootstrap';
-import { useEffect, useState } from "react";
+import { Container, Image, Tabs, Tab, FormControl, Button, Form } from 'react-bootstrap';
+import { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import Remarks from "./Remarks/Remarks";
 
@@ -10,6 +10,7 @@ const ProfilePage = () => {
     const user = useSelector((state) => state.user.value);
     const params = useParams();
     const [owner, setOwner] = useState({});
+    const ref = useRef();
 
     useEffect(() => {
         axios.post(process.env.REACT_APP_API_URL + "user/getUser", {
@@ -20,6 +21,10 @@ const ProfilePage = () => {
             console.log(err);
         });
     }, [params.ownerId]);
+
+    const handleOnChange = () => {
+
+    }
 
     return (
         <>
@@ -38,6 +43,20 @@ const ProfilePage = () => {
                     Hii, I am 2nd tab content
                 </Tab>
             </Tabs>
+
+            {
+                user.googleId !== owner.googleId ?
+                    <Form>
+                        <Container fluid className="d-flex">
+                            <FormControl ref={ref} onChange={handleOnChange} required />
+                            <Button type="submit">
+                                Post
+                            </Button>
+                        </Container>
+                    </Form>
+                    :
+                    <></>
+            }
         </>
     );
 }
