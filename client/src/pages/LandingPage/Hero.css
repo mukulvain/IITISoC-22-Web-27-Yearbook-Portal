@@ -1,0 +1,15 @@
+.hero-section {
+    background: url(../../../public/img/hero.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.overlay {
+    height: 100%;
+    background: #00000059;
+        background: #f3f3f375;
+}
