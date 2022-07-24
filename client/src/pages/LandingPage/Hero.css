@@ -1,5 +1,6 @@
 .hero-section {
     background: url(../../../public/img/hero.webp);
+    background-attachment: fixed;
     background-size: cover;
     height: 600px;
     display: flex;
@@ -10,4 +11,5 @@
 .overlay {
     height: 100%;
     background: #00000059;
+        background: #f3f3f375;
 }

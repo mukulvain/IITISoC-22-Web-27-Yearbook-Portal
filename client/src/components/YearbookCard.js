@@ -23,9 +23,10 @@ const YearbookCard = (props) => {
                   </h5>
                 </div>
                 {/* <div className="align-items-end"> */}
-                <Card.Title as="h1" style={{ marginTop: "115px" }}>
-                  {props.data.yr}
-                </Card.Title>
+                <Card.Subtitle as="h6" style={{ marginTop: "115px" }}>
+                  Yearbook
+                </Card.Subtitle>
+                <Card.Title as="h1">{props.data.yr}</Card.Title>
                 <Button
                   className="m-2"
                   style={{

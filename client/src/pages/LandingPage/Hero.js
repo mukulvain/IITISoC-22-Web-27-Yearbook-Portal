@@ -24,7 +24,11 @@ const Hero = () => {
               <Button variant="success" className="me-3 mt-3">
                 Login
               </Button>
-              <Button variant="warning" className="me-2 mt-3">
+              <Button
+                variant="warning"
+                className="me-2 mt-3"
+                href="#pastyearbooks"
+              >
                 Past Yearbooks
               </Button>
             </Col>
