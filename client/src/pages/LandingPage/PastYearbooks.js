@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import YearbookCard from "../../components/YearbookCard";
 import JsonData from "../../data/cards.json";
+import "../../fonts.css";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,6 +14,15 @@ import { Autoplay, Navigation, Pagination, EffectCoverflow } from "swiper";
 const PastYearbooks = () => {
   return (
     <>
+      <h1
+        className="text-center my-5"
+        style={{
+          color: "grey",
+          fontFamily: "Proza Libre, sans-serif",
+        }}
+      >
+        Yearbooks
+      </h1>
       <Swiper
         // slidesPerView={4}
         // spaceBetween={30}
