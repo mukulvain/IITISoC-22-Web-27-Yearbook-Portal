@@ -1,37 +1,23 @@
-import { Container, Col, Row, Button } from "react-bootstrap";
+import { Container, Button, Card } from "react-bootstrap";
 
 const YearbookCard = () => {
   return (
     <>
       <div>
-        <Container className="mt-3">
-          <Container style={{ borderRadius: "5%", background: "red" }}>
-            <Row
-              lg={1}
-              className="mt-2"
-              style={{
-                background: "green",
-                maxWidth: "400px",
-                borderRadius: "6%",
-              }}
-            >
-              <Col style={{ padding: "0" }}>
-                <img
-                  src="/img/img1.webp"
-                  alt="img1"
-                  style={{
-                    width: "100%",
-                    overflow: "hidden",
-                    borderRadius: "6% 6% 0 0",
-                  }}
-                />
-              </Col>
-              <Col>
-                <p>Description</p>
-                <Button>2020</Button>
-              </Col>
-            </Row>
-          </Container>
+        <Container className="m-4 p-3">
+          <Card
+            className="text-end shadow"
+            style={{ width: "20rem", background: "#c5c5c559" }}
+          >
+            <Card.Img variant="top" src="/img/img1.webp"></Card.Img>
+            <Card.Body>
+              <Card.Title as="h4">2020</Card.Title>
+              <Button variant="success" className="m-2">
+                View YearBook
+              </Button>
+              <Button variant="warning">Download PDF</Button>
+            </Card.Body>
+          </Card>
         </Container>
       </div>
     </>

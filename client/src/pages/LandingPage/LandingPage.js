@@ -1,5 +1,5 @@
-import NavbarComponent from "../../components/NavbarComponent";
-import YearbookCard from "../../components/YearbookCard";
+import NavbarComponent from "../../components/Navbar/NavbarComponent";
+import PastYearbooks from "./PastYearbooks";
 import Hero from "./Hero.js";
 
 const LandingPage = () => {
@@ -7,7 +7,7 @@ const LandingPage = () => {
     <>
       <NavbarComponent />
       <Hero />
-      {/* <YearbookCard /> */}
+      <PastYearbooks />
       <div>Landing Page</div>
     </>
   );
