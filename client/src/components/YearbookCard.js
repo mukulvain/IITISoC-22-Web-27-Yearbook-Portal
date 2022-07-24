@@ -1,17 +1,22 @@
-import { Container, Button, Card } from "react-bootstrap";
+import { Container, Button, Card, Badge } from "react-bootstrap";
 
-const YearbookCard = () => {
+const YearbookCard = (props) => {
   return (
     <>
       <div>
         <Container className="m-4 p-3">
           <Card
             className="text-end shadow"
-            style={{ width: "20rem", background: "#c5c5c559" }}
+            style={{ width: "20rem", background: "#f1f1f1" }}
           >
-            <Card.Img variant="top" src="/img/img1.webp"></Card.Img>
+            <Card.Img variant="top" src={props.data.img}></Card.Img>
             <Card.Body>
-              <Card.Title as="h4">2020</Card.Title>
+              {props.data.badge ? (
+                <Badge bg="secondary">{props.data.badge}</Badge>
+              ) : (
+                <br />
+              )}
+              <Card.Title as="h4">{props.data.yr}</Card.Title>
               <Button variant="success" className="m-2">
                 View YearBook
               </Button>

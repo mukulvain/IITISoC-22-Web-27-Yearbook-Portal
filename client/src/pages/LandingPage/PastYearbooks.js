@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import YearbookCard from "../../components/YearbookCard";
+import JsonData from "../../data/cards.json";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -38,12 +39,12 @@ const PastYearbooks = () => {
         modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
         className="mySwiper"
       >
-        {/* {JsonData.map((d) => (
+        {JsonData.map((d) => (
           <SwiperSlide className="d-flex justify-content-center align-items-center">
-            <Slides data={d} />
+            <YearbookCard data={d} />
           </SwiperSlide>
-        ))} */}
-        <SwiperSlide className="d-flex justify-content-center align-items-center">
+        ))}
+        {/* <SwiperSlide className="d-flex justify-content-center align-items-center">
           <YearbookCard />
         </SwiperSlide>
         <SwiperSlide className="d-flex justify-content-center align-items-center">
@@ -60,7 +61,7 @@ const PastYearbooks = () => {
         </SwiperSlide>
         <SwiperSlide className="d-flex justify-content-center align-items-center">
           <YearbookCard />
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </>
   );
