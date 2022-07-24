@@ -1,26 +1,31 @@
 [
     {
-        "img" : "/img/img4.webp",
+        "img" : "/img/svgs/bg1.svg",
+        "yr" : "2017"
+    },
+
+    {
+        "img" : "/img/svgs/bg2.svg",
         "yr" : "2018"
     },
 
     {
-        "img" : "/img/img5.webp",
+        "img" : "/img/svgs/bg3.svg",
         "yr" : "2019"
     },
     
     {
-        "img" : "/img/img1.webp",
+        "img" : "/img/svgs/bg4.svg",
         "yr" : "2020"
     },
 
     {
-        "img" : "/img/img2.webp",
+        "img" : "/img/svgs/bg5.svg",
         "yr" : "2021"
     },
     
     {
-        "img" : "/img/img3.webp",
+        "img" : "/img/svgs/bg6.svg",
         "yr" : "2022",
         "badge" : "Latest"
     }
