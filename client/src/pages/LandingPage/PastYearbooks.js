@@ -15,11 +15,11 @@ const PastYearbooks = () => {
     <>
       <Swiper
         // slidesPerView={4}
-        spaceBetween={30}
+        // spaceBetween={30}
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={4}
+        slidesPerView={5}
         coverflowEffect={{
           rotate: 30,
           stretch: 0,
@@ -44,24 +44,6 @@ const PastYearbooks = () => {
             <YearbookCard data={d} />
           </SwiperSlide>
         ))}
-        {/* <SwiperSlide className="d-flex justify-content-center align-items-center">
-          <YearbookCard />
-        </SwiperSlide>
-        <SwiperSlide className="d-flex justify-content-center align-items-center">
-          <YearbookCard />
-        </SwiperSlide>
-        <SwiperSlide className="d-flex justify-content-center align-items-center">
-          <YearbookCard />
-        </SwiperSlide>
-        <SwiperSlide className="d-flex justify-content-center align-items-center">
-          <YearbookCard />
-        </SwiperSlide>
-        <SwiperSlide className="d-flex justify-content-center align-items-center">
-          <YearbookCard />
-        </SwiperSlide>
-        <SwiperSlide className="d-flex justify-content-center align-items-center">
-          <YearbookCard />
-        </SwiperSlide> */}
       </Swiper>
     </>
   );
