@@ -1,5 +1,5 @@
 .hero-section {
-    background: url(../../../public/img/hero.webp);
+    background: url(../../../public/img/herobg.svg);
     background-attachment: fixed;
     background-size: cover;
     height: 600px;
@@ -11,5 +11,5 @@
 .overlay {
     height: 100%;
     background: #00000059;
-        background: #f3f3f375;
+    /* color: #ffffffe2; */
 }
