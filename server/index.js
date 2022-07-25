@@ -5,7 +5,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = 5000; // later put it into an env
+const PORT = process.env.PORT || 5000; // later put it into an env
 
 // database part
 mongoose.connect(
