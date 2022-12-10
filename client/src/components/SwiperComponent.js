@@ -22,6 +22,8 @@ const SwiperComponent = () => {
   return (
     <>
       <Swiper
+        grabCursor={true}
+        centeredSlides={true}
         autoplay={{
           delay: 4000,
           disableOnInteraction: false,
