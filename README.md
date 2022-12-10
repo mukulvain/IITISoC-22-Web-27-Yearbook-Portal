@@ -6,3 +6,6 @@
 - Abhinav Yadav - 200004001
 - Vishal Chichani - 200002080
 - Aayushi Choubey - 200002001
+
+Hosted On: https://thebanyan-iiti.netlify.app/
+GitHub Repo: https://github.com/mukulvain/IITISoC-22-Web-27-Yearbook-Portal
