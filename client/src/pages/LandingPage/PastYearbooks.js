@@ -16,7 +16,7 @@ const PastYearbooks = () => {
     <>
       <div id="pastyearbooks">
         <h1
-          className="text-center my-5"
+          className="text-center mt-5"
           style={{
             color: "grey",
             fontFamily: "Proza Libre, sans-serif",

@@ -29,6 +29,8 @@ const YearbookCard = (props) => {
                 <Card.Title as="h1">{props.data.yr}</Card.Title>
                 <Button
                   className="m-2"
+                  href="/sample.pdf"
+                  target="_blank"
                   style={{
                     background: "#f3f3f375",
                     border: "0",
@@ -39,6 +41,8 @@ const YearbookCard = (props) => {
                 </Button>
                 <Button
                   variant="light"
+                  href="/sample.pdf"
+                  download={true}
                   // style={{
                   //   background: "#f3f3f375",
                   //   border: "0",
